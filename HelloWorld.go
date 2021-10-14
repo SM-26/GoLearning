@@ -2,12 +2,14 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
+	"fyne.io/fyne/v2/driver/desktop"
 )
 
 func main() {
@@ -34,6 +36,17 @@ func main() {
 	}
 	myWindow.SetContent(tabs)
 	myWindow.SetIcon(icon)
+
+	drv := fyne.CurrentApp().Driver()
+	w := drv.CreateSplashWindow()
+				w.SetContent(widget.NewLabelWithStyle("Super early alpha\n\nYou have been warned!",
+					fyne.TextAlignCenter, fyne.TextStyle{Bold: true}))
+				w.Show()
+
+				go func() {
+					time.Sleep(time.Second * 3)
+					w.Close()
+				}()
 
 	myWindow.ShowAndRun()
 }
