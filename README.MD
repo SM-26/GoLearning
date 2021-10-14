@@ -5,3 +5,4 @@ learning materials:
 https://dev.to/aurelievache/learning-go-by-examples-part-7-create-a-cross-platform-gui-desktop-app-in-go-44j1
 
 https://github.com/fyne-io/fyne
+https://developer.fyne.io/api/v2.1/
