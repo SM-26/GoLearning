@@ -6,9 +6,11 @@ import (
 )
 
 func main() {
+
 	myApp := app.New()
 	myWindow := myApp.NewWindow("Hello")
-	myWindow.SetContent(widget.NewLable("Hello, World!"))
+	myWindow.SetContent(widget.NewLabel("Hello, World!"))
+	// fmt.Println("Test line")
 
 	myWindow.ShowAndRun()
 }
