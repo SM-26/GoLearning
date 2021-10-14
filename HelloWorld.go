@@ -8,6 +8,7 @@ import (
 	//"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
+	//"fyne.io/fyne/v2/canvas"
 )
 
 func main() {
@@ -27,8 +28,10 @@ func main() {
 	tabs.Append(container.NewTabItemWithIcon("About", theme.HelpIcon(), widget.NewLabel("here is what we got so far")))
 
 	tabs.SetTabLocation(container.TabLocationTop)
+	
 
 	myWindow.SetContent(tabs)
+	myWindow.SetIcon(resourceResourcesRSLiconPng)
 
 	myWindow.ShowAndRun()
 }
