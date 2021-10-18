@@ -1,21 +1,28 @@
 package main
 
 import (
-	//"log"
+	"log"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
-
 	//"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
-	//"fyne.io/fyne/v2/canvas"
 )
 
 func main() {
 
 	myApp := app.New()
+	
 	myWindow := myApp.NewWindow("Hello")
+	
+	icon, iconErr := fyne.LoadResourceFromPath(".\\Resources\\RSLicon.png")
+
+	if iconErr != nil {
+		log.Fatalln("Error in icon loading")
+	}
+	myWindow.SetIcon(icon)
 	myWindow.SetContent(widget.NewLabel("Hello, World!"))
 	myWindow.CenterOnScreen()
 	myWindow.Resize(fyne.NewSize(550, 550))
@@ -31,7 +38,7 @@ func main() {
 	tabs.SetTabLocation(container.TabLocationTop)
 
 	myWindow.SetContent(tabs)
-	myWindow.SetIcon(resourceResourcesRSLiconPng)
-
 	myWindow.ShowAndRun()
+
+	
 }
