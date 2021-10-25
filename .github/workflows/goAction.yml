@@ -51,8 +51,18 @@ jobs:
     - name: FyneBuild
       run: fyne package -icon .\Icon.png
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-app
+        path: |
+          .\*.exe
+
     - name: GoReleaser Action
       uses: goreleaser/goreleaser-action@v2.8.0
+      with: 
+        args: release --rm-dist
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Run GoReleaser
     #   uses: goreleaser/goreleaser-action@v2
@@ -63,10 +73,10 @@ jobs:
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Upload assets
-      uses: actions/upload-artifact@v2
-      with:
-        name: myapp
-        path: dist/*
+    # - name: Upload assets
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: myapp
+    #     path: dist/*
 
     
