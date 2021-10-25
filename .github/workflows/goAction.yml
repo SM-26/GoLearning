@@ -40,8 +40,13 @@ jobs:
          go install fyne.io/fyne/v2/cmd/fyne@latest
          fyne install
     
-    - name: FyneBuild
-      run: fyne package -icon ..\Resources\RSLicon.png
-
     - name: TestBuild
       run: go build -ldflags -H=windowsgui .\HelloWorld.go
+    
+    - name: FyneBuild
+      run: |
+          pwd
+          dir
+          fyne package -icon ..\Resources\RSLicon.png
+
+    
