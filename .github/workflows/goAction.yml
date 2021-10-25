@@ -25,7 +25,7 @@ jobs:
       if: ${{ runner.os == 'Linux' }}
       
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
 
@@ -36,8 +36,8 @@ jobs:
 
     - name: GetFyne
       run: |
-         go install fyne.io/fyne/v2
-         go install fyne.io/fyne/v2/cmd/fyne
+         go install fyne.io/fyne/v2@latest
+         go install fyne.io/fyne/v2/cmd/fyne@latest
          fyne install
     
     - name: FyneBuild
