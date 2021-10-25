@@ -36,12 +36,12 @@ jobs:
 
     - name: GetFyne
       run: |
-         go get fyne.io/fyne/v2
-         go get fyne.io/fyne/v2/cmd/fyne
+         go install fyne.io/fyne/v2
+         go install fyne.io/fyne/v2/cmd/fyne
          fyne install
     
     - name: FyneBuild
-      run: fyne package -icon .\Resources\RSLicon.png
+      run: fyne package -icon ..\Resources\RSLicon.png
 
     - name: TestBuild
       run: go build -ldflags -H=windowsgui .\HelloWorld.go
