@@ -47,13 +47,13 @@ jobs:
       - run: fyne package -icon .\Icon.png
       - run: dir
 #  Test release
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: |
-            GoLearing.exe
-            HelloWorld.exe      
+     - name: Release
+       uses: softprops/action-gh-release@v1
+       if: startsWith(github.ref, 'refs/tags/')
+       with:
+         files: |
+           GoLearing.exe
+           HelloWorld.exe      
       # - uses: actions/upload-artifact@v2
       #    with:
       #      name: my-app
