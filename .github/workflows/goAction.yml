@@ -39,7 +39,7 @@ jobs:
          go get fyne.io/fyne/v2
          go mod tidy
          go build
-      - run: go install fyne.io/fyne/v2@latest
+      # - run: go install fyne.io/fyne/v2@latest
       - run: go install fyne.io/fyne/v2/cmd/fyne@latest
       - run: fyne install
       - run: go build -ldflags -H=windowsgui .\HelloWorld.go
