@@ -1,0 +1,22 @@
+{
+    "language": "en-GB",
+    "messages": [
+        {
+            "id": "The set local is {Lang}",
+            "message": "The set local is {Lang}",
+            "translation": "The set local is {Lang}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Lang",
+                    "string": "%[1]s",
+                    "type": "golang.org/x/text/language.Tag",
+                    "underlyingType": "struct{language golang.org/x/text/internal/language/compact.ID; locale golang.org/x/text/internal/language/compact.ID; full golang.org/x/text/internal/language/compact.fullTag}",
+                    "argNum": 1,
+                    "expr": "lang"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}

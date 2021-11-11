@@ -1,0 +1,20 @@
+{
+    "language": "he-IL",
+    "messages": [
+        {
+            "id": "The set local is {Lang}",
+            "message": "The set local is {Lang}",
+            "translation": "שפת הממשק היא {Lang}",
+            "placeholders": [
+                {
+                    "id": "Lang",
+                    "string": "%[1]s",
+                    "type": "golang.org/x/text/language.Tag",
+                    "underlyingType": "struct{language golang.org/x/text/internal/language/compact.ID; locale golang.org/x/text/internal/language/compact.ID; full golang.org/x/text/internal/language/compact.fullTag}",
+                    "argNum": 1,
+                    "expr": "lang"
+                }
+            ]
+        }
+    ]
+}

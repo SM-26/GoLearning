@@ -7,6 +7,11 @@ or use:
 fyne package -icon .\Resources\RSLicon.png
 ```
 
+the make sure we've got all of the translation, use:
+```
+go generate .\translations\translations.go
+```
+
 learning materials:
 https://dev.to/aurelievache/learning-go-by-examples-part-7-create-a-cross-platform-gui-desktop-app-in-go-44j1
 
